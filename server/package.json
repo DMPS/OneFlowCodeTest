@@ -1,0 +1,22 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jasmine"
+  },
+  "keywords": [],
+  "author": "Dalton Scott",
+  "license": "ISC",
+  "devDependencies": {
+    "jasmine": "^3.1.0"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "express-graphql": "^0.6.12",
+    "graphql": "^0.13.1"
+  }
+}
