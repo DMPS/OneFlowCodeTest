@@ -17,7 +17,7 @@ const RootQuery = new GraphQLObjectType({
 	description: 'This is the default root query provided by our application',
 	fields: {
 		episodes: EpisodeQuery.index(),
-	},
+	}
 });
  
  
