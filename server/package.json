@@ -10,6 +10,7 @@
   "author": "Dalton Scott",
   "license": "ISC",
   "devDependencies": {
+    "graphql-tools": "^2.21.0",
     "jasmine": "^3.1.0"
   },
   "dependencies": {
