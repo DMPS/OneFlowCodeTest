@@ -1,0 +1,12 @@
+<mat-card>
+  <mat-card-title-group>
+  <mat-card-title>{{episode.name}}</mat-card-title>
+  <mat-card-subtitle>Season {{episode.season}}, Episode {{episode.number}}</mat-card-subtitle>
+  <mat-card-subtitle>First shown at {{episode.airtime}} on {{episode.airdate}}</mat-card-subtitle>
+  <img mat-card-lg-image [src]="episode.image.medium">
+  </mat-card-title-group>
+  <br>
+  <mat-card-content>
+    <p>{{truncate(episode.summary)}}...</p>
+  </mat-card-content>
+</mat-card>

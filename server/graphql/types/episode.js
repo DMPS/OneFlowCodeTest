@@ -65,8 +65,11 @@ const EpisodeType = new GraphQL.GraphQLObjectType({
         image: {
             type: ImageType,
             description: 'A collection of differently sized images for display'
+        },
+        summary: {
+            type: GraphQLString,
+            description: 'A summary of the episode'
         }
-
     })
 
 });

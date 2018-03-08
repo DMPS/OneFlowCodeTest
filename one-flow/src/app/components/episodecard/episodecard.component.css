@@ -1,0 +1,7 @@
+mat-card {
+    max-width: 500px;
+    margin-block-end: 20px;
+    margin-block-start: 20px;
+    margin-right: 20px;
+    /* box-sizing: border-box; */
+}

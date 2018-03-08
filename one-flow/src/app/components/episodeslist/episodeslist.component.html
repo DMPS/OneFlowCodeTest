@@ -1,0 +1,19 @@
+<mat-toolbar color="primary">
+  <span class="logo">
+    <img src="/assets/logo.svg" />
+  </span>
+  <span class="fill"></span>
+  <button mat-raised-button color="accent">
+    Menu
+  </button>
+</mat-toolbar>
+
+<section *ngIf="isLoading && !errorMessage">
+  Loading our hyperdrives!!! Retrieving data...
+</section>
+<div fxLayout="row wrap" fxLayoutAlign="space-around center" fxLayout.xs="column">
+  <app-episodecard *ngFor="let episode of episodes" [episode]="episode"></app-episodecard>
+</div>
+<section *ngIf="errorMessage">
+  {{errorMessage}}
+</section>
