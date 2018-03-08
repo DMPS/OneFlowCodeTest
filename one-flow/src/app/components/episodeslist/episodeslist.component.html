@@ -1,6 +1,6 @@
 <mat-toolbar color="primary">
   <mat-toolbar-row>
-    <mat-form-field color="accent" class="searchbar">
+    <mat-form-field color="warn" class="searchbar">
       <input matInput type="text" placeholder="Type in your favourite episode!" [(ngModel)]="nameFragment" />
       <button mat-button *ngIf="nameFragment" matSuffix mat-icon-button aria-label="Clear" (click)="nameFragment=''">
         <mat-icon>close</mat-icon>
