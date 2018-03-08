@@ -1,15 +1,6 @@
 <mat-toolbar color="primary">
   <mat-toolbar-row>
-    <span class="logo">
-      <img src="/assets/logo.svg" />
-    </span>
-    <span class="fill"></span>
-    <button mat-raised-button color="accent">
-      Menu
-    </button>
-  </mat-toolbar-row>
-  <mat-toolbar-row>
-    <mat-form-field color="warn" class="searchbar">
+    <mat-form-field color="accent" class="searchbar">
       <input matInput type="text" placeholder="Type in your favourite episode!" [(ngModel)]="nameFragment" />
       <button mat-button *ngIf="nameFragment" matSuffix mat-icon-button aria-label="Clear" (click)="nameFragment=''">
         <mat-icon>close</mat-icon>
@@ -17,12 +8,6 @@
     </mat-form-field>
   </mat-toolbar-row>
 </mat-toolbar>
-<section *ngIf="isLoading && !errorMessage">
-  Loading our hyperdrives!!! Retrieving data...
-</section>
-<div fxLayout="row wrap" fxLayoutAlign="space-around center" fxLayout.xs="column">
-  <app-episodecard *ngFor="let episode of episodes | SearchPipe: nameFragment"  [episode]="episode"></app-episodecard>
+<div fxLayout="row wrap" fxLayoutAlign="space-around center" fxLayout.xs="column" *ngIf="(gqlData$ | async).data.episodes as episodes">
+  <app-episodecard *ngFor="let episode of episodes | SearchPipe: nameFragment" [episode]="episode"></app-episodecard>
 </div>
-<section *ngIf="errorMessage">
-  {{errorMessage}}
-</section>
