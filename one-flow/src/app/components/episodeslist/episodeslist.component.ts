@@ -11,13 +11,18 @@ import { Episode } from '../../models/episode.model';
 })
 export class EpisodeslistComponent implements OnInit {
   episodes: Episode[] = [];
+  episodeNames: String[] = [];
   errorMessage: String = '';
   isLoading: Boolean = true;
+  nameFragment: String = '';
   constructor(private episodesService: EpisodesService) {
   }
   ngOnInit() {
     this.episodesService.getEpisodes(0).subscribe(
-      episodes => { this.episodes = episodes.data.episodes; },
+      episodes => {
+        this.episodes = episodes.data.episodes;
+        this.episodes.forEach(episode => {this.episodeNames.push(episode.name); });
+      },
       error => { this.errorMessage = error; console.log(error); },
       () => { this.isLoading = false; }
     );
