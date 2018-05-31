@@ -22,5 +22,3 @@ I suggest you do the following:
 1. Create a terminal at ./one-flow and enter the command ng serve
 1. If you wish, you can experiment with GraphQL at http://localhost:1337/. I left the option open for you to play with the schema and queries
 1. View the Angular 2 app at http://localhost:4000/ You can test all of the features there.
-
-### Any questions about the project just reach out at dscott.jobs@gmail.com with the Subject OneFlow Code Test
